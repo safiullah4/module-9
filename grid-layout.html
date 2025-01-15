@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid area Layout</title>
+    <style>
+        .header, .nav, .main,.sidebar,.advertise,.footer{
+            background-color: bisque;
+            border: 2px solid tomato;
+            padding:5px ;
+            border-radius: 5px;
+        }
+
+        /*grid area er name deua jay grid area diye*/
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar ;
+        }
+        .advertise{
+            grid-area: advertise;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        /*ai shob gular parent holo body*/
+        /*grid name name name name avabe area name bole webside e content gula vibinno vag e shajate pari wow*/
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+
+            "nav main main sidebar"
+
+            "nav main main advertise"
+
+            "footer footer footer footer"
+            ;
+        }
+        /*akhon responsive kora akdom shohoj akta grid-area anme lokhle oi pura width oi akta area nibe 2 ta mame dile width 2 vag hobe 3 name e 3 vag avabe*/
+        /*for small devices*/
+        @media screen and(max-width:576px){
+            .container{
+                grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "advertise"
+                "footer";
+                /*serial maintain kore agula akta arektar age likhe oita oitar agei web e dekhabe*/
+            }
+        }
+        /*for medium devices 3 kolam e korar jonno grid-template-area te 3 ta kore name likhbo jevbe shajate cai akta ongsho puro width e thakle 3 bar same name hobe*/
+        
+    </style>
+</head>
+<body class="container">
+    <header class="header">
+        <h3>The header</h3>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="">Nav1</a></li>
+            <li><a href="">Nav2</a></li>
+            <li><a href="">Nav3</a></li>
+        </ul>
+    </nav>
+    <main class="main" >
+        <article>
+            <h3>Main Article1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magnam sapiente obcaecati quasi mollitia voluptate iure quidem sunt nihil quisquam, atque nam repellat, fugit alias animi id quae! Magnam, vero?</p>
+        </article>
+        <article>
+            h3{Main Article 2}
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nisi, officiis blanditiis temporibus obcaecati porro? Aliquam minus fugit possimus soluta ex inventore, dolorem facilis placeat? Fuga quis esse error ullam.</p>
+        </article>
+    </main>
+    <aside>
+        <div class="sidebar">
+            <h4>Sidebar</h4>
+        </div>
+        <div class="advertise">
+            <h4>Advertise</h4>
+        </div>
+    </aside>
+    <footer class="footer">
+        <h3>The footer</h3>
+    </footer>
+</body>
+</html>
