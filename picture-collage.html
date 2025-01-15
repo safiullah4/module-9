@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            /* jetehu onekgula image ace ai site tay tai agulake bole dilam parent er jei size tar 100% neu nijer size er 100% na */
+            width: 100%;
+            height: 100%;
+        }
+        .row{
+            height: 400px;
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .vertical-collage  img{
+            /* height: 50%; */
+            /* row div theke div je bottom margin 5 % paice oita shoho div er size 100% akhon 50% kore img size dile 2.5px kore margin akekta img nijer size er jonno niye nibe */
+            height: calc((100% - 5px)/2);
+            
+        }
+        .row>div{
+            /* display flex er potita  item ke shoman shoman width deuar jonno flex ba flex-grow use kora jay */
+            flex: 1;
+        }
+        .square-collage{
+            /* jehetu akta box e 4 ta inage fit korabo tai */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);/*aita deuar shate shate square-collage div ta ke 4 vag kore 1 ta vag ba 1fr akta image ke deua hoyece r imag e jei size cilo ta overwrite hoye gece*/
+            gap: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My picture collage</h1>
+    </header>
+    
+   <main>
+    <section>
+        <div class="row">
+            <img src="images/A.jpg" alt="">
+        </div>
+        <div class="row">
+            <!-- same class e div nilam jate same height wisth pay div e  -->
+             <div>
+                <img src="images/B.jpg" alt="">
+             </div>
+             <div>
+                <img src="images/C.jpg" alt="">
+             </div>
+             <!--added disply:flex to row in style.karon akhon jehetu image gula div er 100% size nice tai puri page dekhacce. akhon eder parent ke flex korle agula pasha pashi boshe full width ta nibe e jehetu prothom row class e akta image tai ota akai full width nibe.width jototuko thake flex korle items gula ototukojaygay pasha pashi boshbe ntill items er width set kore deua hoy.tokhon flex er karne pashapashi ashbe thik e kinto parent er width ke cross kore bahire jabre-->
+
+             <div class="vertical-collage">
+                <img src="images/D.jpg" alt="">
+                <img src="images/E.jpg" alt="">
+                <!-- akhon upore css e potita img tag ke jehetu 100% height dici tai akta image div er ototuko jayga nibe r arekta nahire jeye div er 100% onujayi jayga nibe akhon atar parent ke bolte pari tmr vitorer image 50% kore height nibe -->
+             </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="images/F.jpg" alt="">
+            </div>
+            <div class="square-collage">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/H.jpg" alt="">
+            </div>
+        </div>
+    </section>
+   </main>
+</body>
+</html>

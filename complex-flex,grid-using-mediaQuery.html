@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reponsive</title>
+    <style>
+
+        .collage img{
+            /* height: 50%; ata dile jehetu bottom 5px gap dici shehetu in total ata doita picturee er maje 5px gap nicher 5px kheye felbe tai calc use kora ucit */
+
+            /* calc use kore akta man minus kore jotota oto diye vag diye korle nicher margin ba side er margin nsto hobe na */
+        height: calc((100% - 5px)/2); /*ata comment out kore height 50% diye dekho ai boc ta onnoder tulonay boro hoye jacce  */ 
+
+        }
+        .row>div{
+            /* flex:1 mane shob item shoman shoman width nibe */
+            flex: 1;
+        }
+        .box{
+            display: flex;
+        }
+        .box-container{
+            /* width: 700px;
+            height: 400px; */
+            border: 5px solid rgb(5, 117, 24);
+            display: grid; /*without any properties will show all items into a single row one after the other(row means vertically one after another for height of row use grid-templete-row), */
+            grid-template-columns: repeat(2,1fr);
+            gap: 5px;
+            
+        }
+        .box0,.box1,.box2, .box3, .box4{
+            background-color: black;
+            height: 100%;
+            color: white;
+            border: 1px dotted red;
+        }
+        @media screen and(max-width:576px) {
+            .box{
+                flex-direction: column;
+                grid-template-columns: 1fr;
+              
+            }
+        }
+        
+@media screen and(min-width:576px) {
+
+    }    
+}
+    </style>
+</head>
+<body>
+   <header>My picture collage</header> 
+  <main>
+    <section>
+        <!-- <div class="row">
+            <img src="https://images.unsplash.com/photo-1735299362091-33c94b71a758?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="">
+           </div>
+        <div class="row">
+           <div>
+            <img src="https://th.bing.com/th?id=OIP.5iHfX1545zrKWsQXD28CQQHaHa&w=119&h=104&c=7&bgcl=16c87f&r=0&o=6&dpr=1.3&pid=13.1" alt="">
+           </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1735299362091-33c94b71a758?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt=""></div>
+            <div class="collage">
+                <img src="https://images.unsplash.com/photo-1735299362091-33c94b71a758?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="">
+                <img src="https://th.bing.com/th?id=OIP.5iHfX1545zrKWsQXD28CQQHaHa&w=119&h=104&c=7&bgcl=16c87f&r=0&o=6&dpr=1.3&pid=13.1" alt="">
+            </div>
+
+        </div> -->
+
+        <div class="box">
+            <div class="box0">box 0</div>
+        <div class="box-container">
+            <div class="box1">BOX1</div>
+            <div class="box2">BOX2</div>
+            <div class="box3">BOX3</div>
+            <div class="box4">BOX4</div>
+        </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
