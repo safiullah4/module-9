@@ -38,22 +38,49 @@
         /*for small device responsiveness */
         
         @media screen and (max-width:576px){
+            body{
+                padding: 20px;
+            }
+            header h1{
+                text-align: center;
+            }
             .row{
                 flex-direction: column;
                 /*akhon row te height dicilam 400px and img e 100% bolay img o 400px nicche akhon jokhon small screen e jabo oi 400px korei nibe tokhon shob kicu thik thak moto adjust korte height auto kore dile puro jayga vagavagi kore nibe */
                 height:auto;
             }
             .square-collage{
-                grid-template-columns: 1;
+                display: flex;
+                flex-direction: column;
             }
+
         }
 /*for medium device responsiveness */
 @media screen and (min-width:576px)and (max-width:992px){
+    header h1{
+        text-align: center;
+    }
+    
+    main section{
+        padding: 10px;
+    }
     .row{
         flex-direction: column;
         height: auto;
     }
-    
+    .square-collage{
+                display: flex;
+                flex-direction: column;
+            }
+}
+/* for bigger devices */
+@media screen and (min-width:992px) {
+    main section{
+        padding: 10px;
+    }    
+    header h1{
+        text-align: center;
+    }
 }
     </style>
 </head> 
