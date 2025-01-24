@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2 way layout</title>
+    <style>
+        .grid-system-one{
+            width: 600px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 150px 150px;
+            gap: 10px;
+        }
+        .box1{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            background-color: rgb(239, 222, 37);
+        }
+        .box2{
+            background-color: navy;
+            color: antiquewhite;
+        }
+        .box3{
+            background-color: yellowgreen;
+        }
+        .box4{
+            background-color: crimson;
+        }
+        .box5{
+            background-color: slategrey;
+        }
+
+        hr{
+            height: 10px;
+            background-color: navy;
+            margin-bottom: 100px;
+        }
+
+
+        .grid-system-2{
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas: "box-one box-two box-three"
+                                 "box-one box-four box-five";
+                                 
+           gap: 10px;
+        }
+        .box-one{
+            grid-area: box-one;
+            background-color: yellowgreen;
+
+        }
+        .box-two{
+            grid-area: box-two;
+            background-color: rgb(239, 222, 37);
+
+
+        }
+        .box-three{
+            grid-area: box-three;
+            background-color: rgb(239, 222, 37);
+
+
+        }
+        .box-four{
+            grid-area: box-four;
+            background-color: rgb(239, 222, 37);
+
+        }
+        .box-five{
+            grid-area: box-five;
+            background-color: rgb(239, 222, 37);
+
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- system one using grid-row and grid-column to specify a perticular place -->
+
+    <h1><span style="background-color: gold;">Grid: </span>Using grid row and grid column to specify grid box position:</h1>
+    <div class="grid-system-one">
+        <div class="box1">big one</div>
+        <div class="box2">small box 1</div>
+        <div class="box3">small box 2</div>
+        <div class="box4">small box 3</div>
+        <div class="box5">small box 4</div>
+    </div>
+
+    <hr>
+
+
+    <h1><span style="background-color: gold;">Grid</span>: Using grid-templete-area and grid-area to specify grid box position:</h1>
+
+    <div class="grid-system-2">
+        <div class="box-one">big one</div>
+        <div class="box-two">small box 1</div>
+        <div class="box-three">small box 2</div>
+        <div class="box-four">small box 3</div>
+        <div class="box-five">small box 4</div>
+    </div>
+</body>
+</html>
